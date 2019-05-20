@@ -8,8 +8,8 @@
         <projectUrl>https://github.com/mustafasacli/SimpleInfra.Validation.Repo</projectUrl>
         <license type="expression">Apache-2.0</license>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <releaseNotes>First Release. Supports Generic Model Validation results.</releaseNotes>
-        <description>Supports Generic Model Validation operations.</description>
+        <releaseNotes>First Release. Supports Generic Model Validation.</releaseNotes>
+        <description>Supports Generic Model Validation.</description>
         <copyright>Copyright ©2019 Msacli Corporation</copyright>
         <tags>Validation Ef</tags>
 	<frameworkAssemblies>
