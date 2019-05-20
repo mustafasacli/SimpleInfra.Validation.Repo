@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>SimpleInfra.Validation.dll</id>
+        <version>1.0.0.0</version>
+        <authors>mustafa sacli</authors>
+        <owners>mustafa sacli</owners>
+        <projectUrl>https://github.com/mustafasacli/SimpleInfra.Validation.Repo</projectUrl>
+        <license type="expression">Apache-2.0</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>First Release. Supports Generic Model Validation results.</releaseNotes>
+        <description>Supports Generic Model Validation operations.</description>
+        <copyright>Copyright ©2019 Msacli Corporation</copyright>
+        <tags>Validation Ef</tags>
+	<frameworkAssemblies>
+		<frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework="net452" />
+	</frameworkAssemblies>
+    </metadata>
+</package>
