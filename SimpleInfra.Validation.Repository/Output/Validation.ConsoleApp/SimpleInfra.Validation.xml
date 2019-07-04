@@ -25,6 +25,16 @@
             Gets Has Error.
             </summary>
         </member>
+        <member name="P:SimpleInfra.Validation.EntityValidationResult.ErrorMessages">
+            <summary>
+            Gets Validation Error Messages.
+            </summary>
+        </member>
+        <member name="P:SimpleInfra.Validation.EntityValidationResult.AllErrorMessages">
+            <summary>
+            Gets All Validation Error Messages.
+            </summary>
+        </member>
         <member name="T:SimpleInfra.Validation.EntityValidator`1">
             <summary>
             EntityValidator class

@@ -1,7 +1,9 @@
 ﻿namespace SimpleInfra.Validation
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Linq;
 
     /// <summary>
     /// EntityValidationResult class.
@@ -15,6 +17,32 @@
         public EntityValidationResult(IList<ValidationResult> errors = null)
         {
             Errors = errors ?? new List<ValidationResult>();
+            BuildErrorMessages();
+        }
+
+        private void BuildErrorMessages()
+        {
+            try
+            {
+                this.ErrorMessages = new List<string>();
+                this.AllErrorMessages = string.Empty;
+
+                if (this.HasError)
+                {
+                    this.ErrorMessages = this.Errors
+                        .Select(q =>
+                     {
+                         var r = string.Join(":", q.MemberNames.ToArray());
+                         return string.Format("{0};{1}", r, q.ErrorMessage);
+                     })
+                     .ToList() ?? new List<string>();
+
+                    this.AllErrorMessages = string.Join(" ??", ErrorMessages.ToArray()) ?? string.Empty;
+                }
+            }
+            catch (Exception e)
+            {
+            }
         }
 
         /// <summary>
@@ -32,5 +60,17 @@
                 return Errors.Count > 0;
             }
         }
+
+        /// <summary>
+        /// Gets Validation Error Messages.
+        /// </summary>
+        public IList<string> ErrorMessages
+        { get; private set; }
+
+        /// <summary>
+        /// Gets All Validation Error Messages.
+        /// </summary>
+        public string AllErrorMessages
+        { get; private set; }
     }
 }
