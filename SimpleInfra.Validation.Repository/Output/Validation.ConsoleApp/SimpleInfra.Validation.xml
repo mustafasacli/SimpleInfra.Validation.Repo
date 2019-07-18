@@ -25,12 +25,12 @@
             Gets Has Error.
             </summary>
         </member>
-        <member name="P:SimpleInfra.Validation.EntityValidationResult.ErrorMessages">
+        <member name="P:SimpleInfra.Validation.EntityValidationResult.ValidationMessages">
             <summary>
             Gets Validation Error Messages.
             </summary>
         </member>
-        <member name="P:SimpleInfra.Validation.EntityValidationResult.AllErrorMessages">
+        <member name="P:SimpleInfra.Validation.EntityValidationResult.AllValidationMessages">
             <summary>
             Gets All Validation Error Messages.
             </summary>

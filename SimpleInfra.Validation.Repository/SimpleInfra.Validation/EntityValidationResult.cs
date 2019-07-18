@@ -24,12 +24,12 @@
         {
             try
             {
-                this.ErrorMessages = new List<string>();
-                this.AllErrorMessages = string.Empty;
+                this.ValidationMessages = new List<string>();
+                this.AllValidationMessages = string.Empty;
 
                 if (this.HasError)
                 {
-                    this.ErrorMessages = this.Errors
+                    this.ValidationMessages = this.Errors
                         .Select(q =>
                      {
                          var r = string.Join(":", q.MemberNames.ToArray());
@@ -37,7 +37,7 @@
                      })
                      .ToList() ?? new List<string>();
 
-                    this.AllErrorMessages = string.Join(" ??", ErrorMessages.ToArray()) ?? string.Empty;
+                    this.AllValidationMessages = string.Join(" ??", ValidationMessages.ToArray()) ?? string.Empty;
                 }
             }
             catch (Exception e)
@@ -64,13 +64,13 @@
         /// <summary>
         /// Gets Validation Error Messages.
         /// </summary>
-        public IList<string> ErrorMessages
+        public IList<string> ValidationMessages
         { get; private set; }
 
         /// <summary>
         /// Gets All Validation Error Messages.
         /// </summary>
-        public string AllErrorMessages
+        public string AllValidationMessages
         { get; private set; }
     }
 }
