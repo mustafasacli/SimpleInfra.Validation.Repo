@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>SimpleInfra.Validation</id>
-        <version>1.3.0.0</version>
+        <version>1.4.0.0</version>
         <authors>mustafa sacli</authors>
         <owners>mustafa sacli</owners>
         <projectUrl>https://github.com/mustafasacli/SimpleInfra.Validation.Repo</projectUrl>
@@ -13,7 +13,7 @@
         <copyright>Copyright ©2019 Msacli Corporation</copyright>
         <tags>Validation Ef</tags>
 	<frameworkAssemblies>
-		<frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework="net452" />
+		<frameworkAssembly assemblyName="System.ComponentModel.DataAnnotations" targetFramework="net45" />
 	</frameworkAssemblies>
     </metadata>
 </package>
