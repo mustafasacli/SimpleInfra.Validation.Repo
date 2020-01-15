@@ -35,6 +35,11 @@
             Gets All Validation Error Messages.
             </summary>
         </member>
+        <member name="P:SimpleInfra.Validation.EntityValidationResult.AllDevValidationMessages">
+            <summary>
+            Gets All Validation Error Messages.
+            </summary>
+        </member>
         <member name="T:SimpleInfra.Validation.EntityValidator`1">
             <summary>
             EntityValidator class

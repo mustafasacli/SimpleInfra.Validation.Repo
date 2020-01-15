@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
     <metadata>
         <id>SimpleInfra.Validation</id>
-        <version>1.3.0.0</version>
+        <version>1.4.0.0</version>
         <authors>mustafa sacli</authors>
         <owners>mustafa sacli</owners>
         <projectUrl>https://github.com/mustafasacli/SimpleInfra.Validation.Repo</projectUrl>
         <license type="expression">Apache-2.0</license>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <releaseNotes>Added Error Message List and All Error Message properties for usage.</releaseNotes>
+        <releaseNotes>Arranged Error Message List and All Error Message properties for usage. Added All Dev Error Messages properties for usage.</releaseNotes>
         <description>Supports Generic Model Validation.</description>
         <copyright>Copyright ©2019 Msacli Corporation</copyright>
         <tags>Validation Ef</tags>

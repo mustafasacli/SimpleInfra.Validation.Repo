@@ -18,6 +18,7 @@
         {
             Errors = errors ?? new List<ValidationResult>();
             BuildErrorMessages();
+            BuildDevErrorMessages();
         }
 
         private void BuildErrorMessages()
@@ -30,14 +31,35 @@
                 if (this.HasError)
                 {
                     this.ValidationMessages = this.Errors
-                        .Select(q =>
-                     {
-                         var r = string.Join(":", q.MemberNames.ToArray());
-                         return string.Format("{0};{1}", r, q.ErrorMessage);
-                     })
+                        .Select(q => q.ErrorMessage)
                      .ToList() ?? new List<string>();
 
-                    this.AllValidationMessages = string.Join(" ??", ValidationMessages.ToArray()) ?? string.Empty;
+                    this.AllValidationMessages = string.Join(" \r\n", ValidationMessages.ToArray()) ?? string.Empty;
+                }
+            }
+            catch (Exception e)
+            {
+            }
+        }
+
+        private void BuildDevErrorMessages()
+        {
+            try
+            {
+                this.AllDevValidationMessages = string.Empty;
+
+                if (this.HasError)
+                {
+                    var list = new List<string>();
+                    list = this.Errors
+                         .Select(q =>
+                      {
+                          var r = string.Join(":", q.MemberNames.ToArray());
+                          return string.Format("{0};{1}", r, q.ErrorMessage);
+                      })
+                      .ToList() ?? new List<string>();
+
+                    this.AllDevValidationMessages = string.Join(" ??", list.ToArray()) ?? string.Empty;
                 }
             }
             catch (Exception e)
@@ -71,6 +93,12 @@
         /// Gets All Validation Error Messages.
         /// </summary>
         public string AllValidationMessages
+        { get; private set; }
+
+        /// <summary>
+        /// Gets All Validation Error Messages.
+        /// </summary>
+        public string AllDevValidationMessages
         { get; private set; }
     }
 }

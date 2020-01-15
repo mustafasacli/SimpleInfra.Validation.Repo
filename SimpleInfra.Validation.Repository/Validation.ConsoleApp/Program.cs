@@ -32,6 +32,10 @@
                     }
                     Console.WriteLine("--------------------------------------");
                 }
+
+                Console.WriteLine(validationResult.AllValidationMessages);
+                Console.WriteLine("--------------------------------------");
+                Console.WriteLine(validationResult.AllDevValidationMessages);
             }
 
             Console.WriteLine("Program Finished.");
